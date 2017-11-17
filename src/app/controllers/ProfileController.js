@@ -78,7 +78,7 @@
       minuteType: "Every 5 Minute",
       schedule: ["Minute"],
       scheduleType: "Minute",
-      url: "https://postman-echo.com/time/unit?timestamp=2016-10-10&unit=day",
+      url: "",
       minute: ["Every 5 Minute", "Every 10 Minute", "Every 20 Minute"],
       biography: 'We are young and ambitious full service design and technology company. ' +
         'Our focus is JavaScript development and User Interface design.',
