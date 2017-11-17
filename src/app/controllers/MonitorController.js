@@ -16,7 +16,7 @@
             { 
               "label" : "A Label" ,
               "value" : 29.765957771107,
-              "color": "#00FF00"
+              "color": "#4CAF50"
             } , 
             { 
               "label" : "B Label" , 
@@ -26,12 +26,12 @@
             { 
               "label" : "C Label" , 
               "value" : 32.807804682612,
-              "color": "#00FF00"
+              "color": "#4CAF50"
             } , 
             { 
               "label" : "D Label", 
               "value" : 196.45946739256,
-              "color": "#00FF00"
+              "color": "#4CAF50"
             } , 
             { 
               "label" : "E Label" ,
@@ -41,17 +41,17 @@
             { 
               "label" : "F Label" , 
               "value" : 98.079782601442,
-              "color": "#00FF00"
+              "color": "#4CAF50"
             } , 
             { 
               "label" : "G Label" , 
               "value" : 13.925743130903,
-              "color": "#00FF00"
+              "color": "#4CAF50"
             } , 
             { 
               "label" : "H Label" , 
               "value" : 5.1387322875705,
-              "color": "#00FF00"
+              "color": "#4CAF50"
             }
           ]
         }
