@@ -16,6 +16,8 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
       .state('home.dashboard', {
         url: '/dashboard',
         templateUrl: 'app/views/dashboard.html',
+        controller: 'DashboardController',
+        controllerAs: 'vm',
         data: {
           title: 'Dashboard'
         }
@@ -39,7 +41,7 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
         }
       })
       .state('home.api-list', {
-        url: '/api-list',
+        url: '/api-list/:groupID',
         controller: 'DataTableController',
         controllerAs: 'vm',
         templateUrl: 'app/views/data-table.html',

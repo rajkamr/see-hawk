@@ -5,13 +5,14 @@
     .controller('DataTableController', [
       'tableService',
       '$scope',
+      '$stateParams',
       TableController
       
     ]);
 
-  function TableController(tableService , $scope) {
+  function TableController(tableService , $scope, $stateParams) {
     var vm = this;
-
+console.log($stateParams.groupID, "_$stateParams");
     vm.tableData = [];
     vm.totalItems = 0;
     vm.apiStatus = tableService.API_STATUS;

@@ -186,3 +186,23 @@ md-table-container {
 }
 
 .fixed-height-widget > div { margin: 0; }
+#mainDashboard {
+  .group-content {
+    text-align: center;
+  }
+  .group-icon {
+    font-size: 12em;
+  }
+  h3 {
+    text-align: center;
+  }
+  .group-meta {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #AFB0A3;
+  }
+  a {
+    text-decoration: none;
+  }
+}
