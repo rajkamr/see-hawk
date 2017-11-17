@@ -8,11 +8,11 @@
                         <i class="material-icons group-icon">add</i>
                     </div>
                     <h3>Add</h3>
-                    <div class="group-meta">New group</div>
+                    <div class="group-meta">New API Monitor</div>
                   </md-card-content>
               </md-card>
             </a>
-            <a ui-sref="home.api-list({groupID: 1})" ng-repeat="group in vm.groupList">
+            <a ui-sref="home.api-list({groupID: group.id})" ng-repeat="group in vm.groupList">
               <md-card>
                   <img height="300" width="300" ng-src="assets/images/{{group.image}}" class="md-card-image" alt="Group Image">
                   <md-card-content>
