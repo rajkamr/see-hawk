@@ -60,7 +60,7 @@
         "last_exc_status": true,
         "last_exc_time": "11/17/2017 10:50 AM",
         "last_failure_time": "11/17/2017 09:50 AM",
-        "schedule": vm.addApi.scheduleType,
+        "schedule": vm.addApi.minuteType,
         "notification_email": vm.addApi.clientEmail
       }
 

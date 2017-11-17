@@ -18,7 +18,7 @@
        "last_exc_status": true,
        "last_exc_time": "11/17/2017 10:50 AM",
        "last_failure_time": "11/17/2017 09:50 AM",
-       "schedule": 1,
+       "schedule": "Every 5 Minute",
        "notification_email": "see-hawk@trimble.com"
       },
       {
@@ -27,7 +27,7 @@
         "last_exc_status": false,
         "last_exc_time": "11/17/2017 10:50 AM",
         "last_failure_time": "11/17/2017 09:50 AM",
-        "schedule": 1,
+        "schedule": "Every 15 Minute",
         "notification_email": "see-hawk@trimble.com"
        },
        {
@@ -36,7 +36,7 @@
          "last_exc_status": false,
          "last_exc_time": "11/17/2017 10:50 AM",
          "last_failure_time": "11/17/2017 09:50 AM",
-         "schedule": 1,
+         "schedule": "Every 10 Minute",
          "notification_email": "see-hawk@trimble.csee-hawk@trimble.com, see-hawk@trimble.com, see-hawk@trimble.com, see-hawk@trimble.csee-hawk@trimble.com, see-hawk@trimble.com, see-hawk@trimble.com"
         }
     ];
