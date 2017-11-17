@@ -16,9 +16,9 @@
       },
       
       {
-        name: '',
-        icon: '',
-        sref: ''
+        name: 'Table',
+        icon: 'view_module',
+        sref: '.table'
       }
     ];
 
