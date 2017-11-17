@@ -14,11 +14,12 @@
         icon: 'dashboard',
         sref: '.dashboard'
       },
-      
+      /*{
       {
         name: 'Table',
         icon: 'view_module',
         sref: '.table'
+      },*/
       }
     ];
 
