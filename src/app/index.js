@@ -48,6 +48,13 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
         data: {
           title: 'Table'
         }
+      })
+      .state('home.chart', {
+        url: '/chart',
+        templateUrl: 'app/views/chart.html',
+        data: {
+          title: 'Chart'
+        }
       });
 
     $urlRouterProvider.otherwise('/dashboard');
