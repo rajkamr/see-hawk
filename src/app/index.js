@@ -22,13 +22,13 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
           title: 'Dashboard'
         }
       })
-      .state('home.profile', {
-        url: '/profile',
+      .state('home.addapi', {
+        url: '/addapi',
         templateUrl: 'app/views/profile.html',
         controller: 'ProfileController',
         controllerAs: 'vm',
         data: {
-          title: 'Profile'
+          title: 'Add API'
         }
       })
       .state('home.table', {
@@ -47,6 +47,13 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
         templateUrl: 'app/views/data-table.html',
         data: {
           title: 'Table'
+        }
+      })
+      .state('home.chart', {
+        url: '/chart',
+        templateUrl: 'app/views/chart.html',
+        data: {
+          title: 'Chart'
         }
       });
 

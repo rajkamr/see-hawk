@@ -117,9 +117,9 @@
             <md-input-container flex>
             </md-input-container>
             <md-input-container flex style="text-align:right">
-                <md-button class="md-raised">CANCEL</md-button>
+                <md-button class="md-raised" ui-sref="home.dashboard">CANCEL</md-button>
                 
-                <md-button class="md-raised" ng-click="vm.saveAPIValue()">ADD</md-button>
+                <md-button class="md-raised" ng-disabled="vm.addApi.groupName===''" ng-click="vm.saveAPIValue()">ADD</md-button>
             </md-input-container>
         </div>
     </form>
