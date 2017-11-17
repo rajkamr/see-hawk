@@ -45,7 +45,7 @@ console.log($stateParams.groupID, "_$stateParams");
 
     function GetItemsData(query) {
       tableService
-      .loadByPagination(query)
+      .loadByPagination(query, $stateParams.groupID)
       .then(function(tableData) { 
         vm.tableData =  tableData.items;
         // Represents the count of database count of records, not items array!

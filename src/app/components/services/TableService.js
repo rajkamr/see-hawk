@@ -9,10 +9,11 @@
   
   function tableService($q){
 
-    var allTableData = [];
-
-    var tableData = [
+    var tableData = [];
+    
+     var allTableData = [
       {
+      "groupName": "Group 1",
        "apiName": "Search API",
        "last_exc_status": true,
        "last_exc_time": "11/17/2017 10:50 AM",
@@ -21,6 +22,7 @@
        "notification_email": "see-hawk@trimble.com"
       },
       {
+        "groupName": "Group 2",
         "apiName": "Search API",
         "last_exc_status": false,
         "last_exc_time": "11/17/2017 10:50 AM",
@@ -29,6 +31,7 @@
         "notification_email": "see-hawk@trimble.com"
        },
        {
+        "groupName": "Group 3",
          "apiName": "Search API",
          "last_exc_status": false,
          "last_exc_time": "11/17/2017 10:50 AM",
@@ -43,8 +46,14 @@
       "false": "Failure"
     };
 
-    function PickRandom() {
-      return Object.assign({}, tableData[Math.floor(Math.random()*tableData.length)]);
+    function PickGroupData(groupName) {
+      tableData = [];
+      for(var i = 0; i < allTableData.length; i++) {
+        if (allTableData[i].groupName === groupName) {
+          tableData.push(allTableData[i]);
+        }
+      }
+      return tableData;
     }
 
     return {
@@ -56,18 +65,14 @@
       /**
        * Query expects that `limit`,`page`, and `order` fields be present
        */
-      loadByPagination: function (query) {
+      loadByPagination: function (query, groupName) {
+        var listAll = PickGroupData(groupName);
         query = query || {limit:10,page:1};
-         
         var list = [];
         var start = (query.page-1)*query.limit;
         var end = start + query.limit;
-        for (var i = start; i < end; i++) {
-          var f = PickRandom();
-          f.id = i+1;
-          list.push(f);
-        }
-        return $q.when({items:list,count:800});
+        list = listAll.slice(start, end);
+        return $q.when({items:list,count:list.length});
       }
     };
   }
