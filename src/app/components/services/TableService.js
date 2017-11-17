@@ -10,60 +10,42 @@
   function tableService($q){
     var tableData = [
       {
-        issue: 'Nested views',
-        progress: 100,
-        status: 'Done',
-        class: 'md-accent'
+       "apiName": "Search API",
+       "last_exc_status": true,
+       "last_exc_time": "11/17/2017 10:50 AM",
+       "last_failure_time": "11/17/2017 09:50 AM",
+       "schedule": 1,
+       "notification_email": "see-hawk@trimble.com"
       },
       {
-        issue: 'Table component',
-        progress: 40,
-        status: 'Feedback',
-        class: ''
-      },
-      {
-        issue: 'Dashboard tiles',
-        progress: 100,
-        status: 'Done',
-        class: 'md-accent'
-      },
-      {
-        issue: 'Panel widget',
-        progress: 84,
-        status: 'In progress',
-        class: 'orange'
-      },
-      {
-        issue: 'Form',
-        progress: 100,
-        status: 'Done',
-        class: 'md-accent'
-      },
-      {
-        issue: 'Custom CSS',
-        progress: 20,
-        status: 'Feedback',
-        class: ''
-      },
-      {
-        issue: 'Add backend',
-        progress: 1,
-        status: 'To do',
-        class: 'md-warn'
-      },
-      {
-        issue: 'Layout with sidebar',
-        progress: 100,
-        status: 'Done',
-        class: 'md-accent'
-      }
+        "apiName": "Search API",
+        "last_exc_status": false,
+        "last_exc_time": "11/17/2017 10:50 AM",
+        "last_failure_time": "11/17/2017 09:50 AM",
+        "schedule": 1,
+        "notification_email": "see-hawk@trimble.com"
+       },
+       {
+         "apiName": "Search API",
+         "last_exc_status": false,
+         "last_exc_time": "11/17/2017 10:50 AM",
+         "last_failure_time": "11/17/2017 09:50 AM",
+         "schedule": 1,
+         "notification_email": "see-hawk@trimble.csee-hawk@trimble.com, see-hawk@trimble.com, see-hawk@trimble.com, see-hawk@trimble.csee-hawk@trimble.com, see-hawk@trimble.com, see-hawk@trimble.com"
+        }
     ];
+
+    var API_STATUS = {
+      "true": "Success",
+      "false": "Failure"
+    };
 
     function PickRandom() {
       return Object.assign({}, tableData[Math.floor(Math.random()*tableData.length)]);
     }
 
     return {
+      API_STATUS: API_STATUS,
       loadAllItems : function() {
         return $q.when(tableData);
       },

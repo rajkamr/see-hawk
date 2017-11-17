@@ -25,9 +25,9 @@
         sref: '.table'
       },
       {
-        name: 'Data Table',
+        name: 'API List',
         icon: 'view_module',
-        sref: '.data-table'
+        sref: '.api-list'
       }
     ];
 

@@ -14,6 +14,7 @@
 
     vm.tableData = [];
     vm.totalItems = 0;
+    vm.apiStatus = tableService.API_STATUS;
 
     $scope.selected = [];
 
