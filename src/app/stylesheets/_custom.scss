@@ -173,7 +173,7 @@ md-backdrop.md-sidenav-backdrop {
 }
 
 .green {
-  color: #d1f442 !important;
+  color: darkgreen !important;
 }
 .red {
   color: #FF0000 !important;
@@ -185,6 +185,9 @@ md-table-container {
   }
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
 .fixed-height-widget > div { margin: 0; }
 #mainDashboard {
   .group-content {

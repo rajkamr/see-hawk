@@ -10,30 +10,20 @@
   function tableService($q){
 
     var tableData = [];
-    
      var allTableData = [
       {
-      "groupName": "Group 1",
+      "groupName": "VL-Unified Fleet",
        "apiName": "Search API",
-       "last_exc_status": true,
+       "last_exc_status": false,
        "last_exc_time": "11/17/2017 10:50 AM",
        "last_failure_time": "11/17/2017 09:50 AM",
        "schedule": "Every 5 Minute",
        "notification_email": "see-hawk@trimble.com"
       },
-      {
-        "groupName": "Group 2",
-        "apiName": "Search API",
-        "last_exc_status": false,
-        "last_exc_time": "11/17/2017 10:50 AM",
-        "last_failure_time": "11/17/2017 09:50 AM",
-        "schedule": "Every 15 Minute",
-        "notification_email": "see-hawk@trimble.com"
-       },
        {
-        "groupName": "Group 3",
+        "groupName": "VL-Unified Productivity",
          "apiName": "Search API",
-         "last_exc_status": false,
+         "last_exc_status": true,
          "last_exc_time": "11/17/2017 10:50 AM",
          "last_failure_time": "11/17/2017 09:50 AM",
          "schedule": "Every 10 Minute",
