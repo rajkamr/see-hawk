@@ -19,7 +19,7 @@
         </thead>
         <tbody md-body>
         <tr md-row md-select="item" md-select-id="name" md-auto-select ng-repeat="item in vm.tableData track by $index">
-            <td md-cell><a ui-sref="home.dashboard">{{item.apiName}}</a></td>
+            <td md-cell><a ui-sref="home.chart">{{item.apiName}}</a></td>
             <td md-cell ng-class="{green: item.last_exc_status, red: !item.last_exc_status}">{{vm.apiStatus[item.last_exc_status]}}</td>
             <td md-cell>{{item.last_exc_time}}</td>
             <td md-cell>{{item.last_failure_time}}</td>
