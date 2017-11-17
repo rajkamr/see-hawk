@@ -184,3 +184,24 @@ md-table-container {
     width: 300px;
   }
 }
+
+#mainDashboard {
+  .group-content {
+    text-align: center;
+  }
+  .group-icon {
+    font-size: 12em;
+  }
+  h3 {
+    text-align: center;
+  }
+  .group-meta {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #AFB0A3;
+  }
+  a {
+    text-decoration: none;
+  }
+}

@@ -1,16 +1,28 @@
-<div layout-gt-md="row">
-  <panel-widget flex title="Site visitors" template="app/views/partials/visitors.html" class="fixed-height-widget"></panel-widget>
-  <panel-widget flex title="Warnings" template="app/views/partials/warnings.html" class="fixed-height-widget"></panel-widget>
-  <panel-widget flex title="Memory load" template="app/views/partials/memory.html" class="fixed-height-widget"></panel-widget>
-</div>
-
-<div layout-gt-md="row">
-  <panel-widget flex title="Server Control Panel" template="app/views/partials/controlPanel.html" class="fixed-height-widget"></panel-widget>
-  <panel-widget flex title="Usage Stats" template="app/views/partials/usage.html" class="fixed-height-widget"></panel-widget>
-  <panel-widget flex title="Autocomplete Input" template="app/views/partials/autocomplete.html" options="true" class="fixed-height-widget"></panel-widget>
-</div>
-
-<div layout-gt-md="row">
-  <panel-widget flex title="Performance" template="app/views/partials/performance.html" options="true"></panel-widget>
-  <panel-widget flex title="TODO list" template="app/views/partials/checkboxes.html"></panel-widget>
+<div ng-cloak id="mainDashboard">
+    <md-content class="md-padding" layout-xs="column" layout-gt-xs="row">
+        <div flex-xs flex-gt-xs="50" layout-gt-xs="row" layout="column">
+            <a ui-sref="home.api-list">
+              <md-card>
+                  <md-card-content>
+                    <div class="group-content">
+                        <i class="material-icons group-icon">add</i>
+                    </div>
+                    <h3>Add</h3>
+                    <div class="group-meta">New group</div>
+                  </md-card-content>
+              </md-card>
+            </a>
+            <a ui-sref="home.api-list({groupID: 1})" ng-repeat="group in vm.groupList">
+              <md-card>
+                  <md-card-content>
+                    <div class="group-content">
+                        <i class="material-icons group-icon" ng-class="{red: !group.allClear}">{{group.icon}}</i>
+                    </div>
+                    <h3>{{ group.name }}</h3>
+                    <div class="group-meta">Last Executed: {{ group.last_exec_time }}</div>
+                  </md-card-content>
+              </md-card>
+            </a>
+        </div>
+    </md-content>
 </div>
