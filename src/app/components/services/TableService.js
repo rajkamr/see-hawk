@@ -42,8 +42,8 @@
     ];
 
     var API_STATUS = {
-      "true": "Success",
-      "false": "Failure"
+      "true": "Pass",
+      "false": "Fail"
     };
 
     function PickGroupData(groupName) {
