@@ -21,15 +21,15 @@
             <div layout layout-sm="column">
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Schedule</label>
-                    <md-select ng-model="vm.addApi.schedule[0]">
-                        <md-option ng-repeat="schedule in vm.addApi.schedule" value="{{schedule}}" ng-selected="vm.minuteTypeSelcted(schedule)">
+                    <md-select ng-model="vm.addApi.scheduleType">
+                        <md-option ng-repeat="schedule in vm.addApi.schedule" value="{{schedule}}" onselect="vm.minuteTypeSelcted(schedule)">
                             {{schedule}}
                         </md-option>
                     </md-select>
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm >
-                    <md-select ng-model="vm.addApi.minute[0]">
-                        <md-option ng-repeat="minute in vm.addApi.minute" ng-value="{{minute}}" ng-selected="vm.minuteTypeSelcted(minute)">
+                    <md-select ng-model="vm.addApi.minuteType">
+                        <md-option ng-repeat="minute in vm.addApi.minute" value="{{minute}}" ng-selected="vm.minuteTypeSelcted(minute)">
                             {{minute}}
                         </md-option>
                     </md-select>
@@ -55,8 +55,8 @@
     <form name="apiform">
         <div layout layout-sm="column">
             <md-input-container class="md-block" flex-gt-sm>
-                <md-select ng-model="vm.addApi.request[0]">
-                    <md-option ng-repeat="req in vm.addApi.request" value="{{req}}" ng-selected="vm.reqestTypeSelcted(req)">
+                <md-select ng-model="vm.addApi.requestType">
+                    <md-option ng-repeat="req in vm.addApi.request" value="{{req}}" onselect="vm.reqestTypeSelcted(req)">
                         {{req}}
                     </md-option>
                 </md-select>
@@ -118,7 +118,8 @@
             </md-input-container>
             <md-input-container flex style="text-align:right">
                 <md-button class="md-raised">CANCEL</md-button>
-                <md-button class="md-raised">ADD</md-button>
+                
+                <md-button class="md-raised" ng-click="vm.saveAPIValue()">ADD</md-button>
             </md-input-container>
         </div>
     </form>
