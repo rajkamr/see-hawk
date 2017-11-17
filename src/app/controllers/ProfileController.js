@@ -30,7 +30,29 @@
     }
 
     function saveAPIValue() {
-      console.log("saveAPIValue--------" );
+      console.log("saveAPIValue--------");
+      var isGroupFound = false;
+      for (var i = 0; i < backEndService.groupList.length; i++) {
+        if (backEndService.groupList[i].name === vm.addApi.groupName) {
+          isGroupFound = true;
+        }
+      }
+      var groupList = [];
+       groupList = backEndService.groupList;
+
+      if (!isGroupFound) {
+        var group = {
+            "id": 10001,
+            "name": vm.addApi.groupName,
+            "last_exec_time": "17/01/2017 09:00 AM",
+            "image": groupIconList[Math.floor(Math.random() * groupIconList.length)],
+            "allClear": true
+          };
+          
+          groupList.push(group);
+      }
+
+      backEndService.groupList = groupList;
       $state.go('home.dashboard');
     }
 
@@ -43,7 +65,7 @@
       requestType: "POST",
       minuteType: "Every 5 Minute",
       schedule: ["Minute"],
-      scheduleType:"Minute",
+      scheduleType: "Minute",
       url: "https://postman-echo.com/time/unit?timestamp=2016-10-10&unit=day",
       minute: ["Every 5 Minute", "Every 10 Minute", "Every 20 Minute"],
       biography: 'We are young and ambitious full service design and technology company. ' +

@@ -6,8 +6,11 @@
         '$q',
       tableService
   ]);
-
+  
   function tableService($q){
+
+    var allTableData = [];
+
     var tableData = [
       {
        "apiName": "Search API",
@@ -46,6 +49,7 @@
 
     return {
       API_STATUS: API_STATUS,
+      allTableData: allTableData,
       loadAllItems : function() {
         return $q.when(tableData);
       },
