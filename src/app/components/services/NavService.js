@@ -10,24 +10,15 @@
   function navService($q){
     var menuItems = [
       {
-        name: 'Dashboard',
+        name: 'API Monitor',
         icon: 'dashboard',
         sref: '.dashboard'
       },
+      
       {
-        name: 'Profile',
-        icon: 'person',
-        sref: '.profile'
-      },
-      {
-        name: 'Table',
-        icon: 'view_module',
-        sref: '.table'
-      },
-      {
-        name: 'API List',
-        icon: 'view_module',
-        sref: '.api-list'
+        name: '',
+        icon: '',
+        sref: ''
       }
     ];
 

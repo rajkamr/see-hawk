@@ -22,13 +22,13 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
           title: 'Dashboard'
         }
       })
-      .state('home.profile', {
-        url: '/profile',
+      .state('home.addapi', {
+        url: '/addapi',
         templateUrl: 'app/views/profile.html',
         controller: 'ProfileController',
         controllerAs: 'vm',
         data: {
-          title: 'Profile'
+          title: 'Add API'
         }
       })
       .state('home.table', {
