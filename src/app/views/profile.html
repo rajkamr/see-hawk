@@ -1,59 +1,125 @@
 <!-- TODO: Add validations -->
-<md-content md-theme="dark" class="md-padding" layout="row" layout-sm="column">
-    <md-input-container>
-        <label>Username</label>
-        <input ng-model="vm.user.title">
-    </md-input-container>
-    <md-input-container>
-        <label>Email</label>
-        <input ng-model="vm.user.email" type="email">
-    </md-input-container>
+<md-content class="md-padding">
+    <h3>Add Monitor</h3>
+    <p>You can monitor your API in see-Hawk. Monitoring lets you to run requests periodically to check for its performance and
+        response.
+    </p>
+    <div>
+        <form name="addApiForm">
+            <div layout layout-sm="column">
+                <md-input-container flex>
+                    <label>Monitor Name</label>
+                    <input ng-model="vm.addApi.monitorName">
+                </md-input-container>
+            </div>
+            <div layout layout-sm="column">
+                <md-input-container flex>
+                    <label>Group Name</label>
+                    <input ng-model="vm.addApi.groupName">
+                </md-input-container>
+            </div>
+            <div layout layout-sm="column">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Schedule</label>
+                    <md-select ng-model="vm.addApi.schedule[0]">
+                        <md-option ng-repeat="schedule in vm.addApi.schedule" value="{{schedule}}" ng-selected="vm.minuteTypeSelcted(schedule)">
+                            {{schedule}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm >
+                    <md-select ng-model="vm.addApi.minute[0]">
+                        <md-option ng-repeat="minute in vm.addApi.minute" ng-value="{{minute}}" ng-selected="vm.minuteTypeSelcted(minute)">
+                            {{minute}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <div layout layout-sm="column">
+                <md-input-container class="md-block">
+                    <label>Recieve email notification for failures and errors</label>
+                    <input required type="email" name="clientEmail" ng-model="vm.addApi.clientEmail" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/"
+                    />
+                    <div ng-messages="projectForm.clientEmail.$error" role="alert">
+                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                            Your email must be between 10 and 100 characters long and look like an e-mail address.
+                        </div>
+                    </div>
+                </md-input-container>
+            </div>
+        </form>
+    </div>
 </md-content>
 <md-content class="md-padding">
-    <form name="userForm">
+    <h3>API Details</h3>
+    <form name="apiform">
         <div layout layout-sm="column">
-            <md-input-container flex="80">
-                <label>Company (Disabled)</label>
-                <input ng-model="vm.user.company" disabled>
+            <md-input-container class="md-block" flex-gt-sm>
+                <md-select ng-model="vm.addApi.request[0]">
+                    <md-option ng-repeat="req in vm.addApi.request" value="{{req}}" ng-selected="vm.reqestTypeSelcted(req)">
+                        {{req}}
+                    </md-option>
+                </md-select>
             </md-input-container>
             <md-input-container flex>
-                <label>Submission Date</label>
-                <input type="date" ng-model="vm.user.submissionDate">
+                <label>API Url</label>
+                <input ng-model="vm.addApi.url">
+            </md-input-container>
+        </div>
+    </form>
+</md-content>
+<md-content class="md-padding">
+    <h3>Headers</h3>
+    <form name="apiform">
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <label>Key</label>
+            </md-input-container>
+            <md-input-container flex>
+                <label>Value</label>
             </md-input-container>
         </div>
         <div layout layout-sm="column">
             <md-input-container flex>
-                <label>First Name</label>
-                <input ng-model="vm.user.firstName"
-                       placeholder="Placeholder text">
+                <input value="Content-type">
             </md-input-container>
             <md-input-container flex>
-                <label>Last Name</label>
-                <input ng-model="vm.user.lastName">
+                <input value="application/json">
             </md-input-container>
         </div>
-        <md-input-container flex>
-            <label>Address</label>
-            <input ng-model="vm.user.address">
-        </md-input-container>
         <div layout layout-sm="column">
             <md-input-container flex>
-                <label>City</label>
-                <input ng-model="vm.user.city">
+                <input value="Authorization">
             </md-input-container>
             <md-input-container flex>
-                <label>State</label>
-                <input ng-model="user.state">
-            </md-input-container>
-            <md-input-container flex>
-                <label>Postal Code</label>
-                <input ng-model="vm.user.postalCode">
+                <input value="Authorization">
             </md-input-container>
         </div>
-        <md-input-container flex>
-            <label>About us</label>
-            <textarea ng-model="vm.user.biography" columns="1"
-                      md-maxlength="150"></textarea>
-        </md-input-container>
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <input value="">
+            </md-input-container>
+            <md-input-container flex>
+                <input value="">
+            </md-input-container>
+        </div>
+    </form>
+</md-content>
+<md-content class="md-padding">
+    <h3>Body</h3>
+    <form name="apiform">
+        <div layout layout-sm="column">
+            <md-input-container flex>
+                <textarea ng-value="" aria-multiline="true"/>
+            </md-input-container>
+        </div>
+        <div layout layout-sm="column">
+            <md-input-container flex>
+            </md-input-container>
+            <md-input-container flex style="text-align:right">
+                <md-button class="md-raised">CANCEL</md-button>
+                <md-button class="md-raised">ADD</md-button>
+            </md-input-container>
+        </div>
     </form>
 </md-content>
