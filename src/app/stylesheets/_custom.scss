@@ -192,6 +192,7 @@ md-table-container {
   }
   .group-icon {
     font-size: 12em;
+    color: #AFB0A3 !important;
   }
   h3 {
     text-align: center;
@@ -204,5 +205,11 @@ md-table-container {
   }
   a {
     text-decoration: none;
+  }
+  md-card {
+    img.md-card-image {
+      width: 272px;
+      height: 175px;
+    }
   }
 }

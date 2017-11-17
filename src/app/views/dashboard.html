@@ -14,12 +14,13 @@
             </a>
             <a ui-sref="home.api-list({groupID: 1})" ng-repeat="group in vm.groupList">
               <md-card>
+                  <img height="300" width="300" ng-src="assets/images/{{group.image}}" class="md-card-image" alt="Group Image">
                   <md-card-content>
                     <div class="group-content">
-                        <i class="material-icons group-icon" ng-class="{red: !group.allClear}">{{group.icon}}</i>
+                        <i class="material-icons group-icon">{{group.icon}}</i>
                     </div>
-                    <h3>{{ group.name }}</h3>
-                    <div class="group-meta">Last Executed: {{ group.last_exec_time }}</div>
+                    <h3 ng-class="{red: !group.allClear}">{{ group.name }}</h3>
+                    <div class="group-meta" ng-class="{red: !group.allClear}">Last Executed: {{ group.last_exec_time }}</div>
                   </md-card-content>
               </md-card>
             </a>
